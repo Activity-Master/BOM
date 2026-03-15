@@ -10,12 +10,65 @@
     <name>The BOM for the Activity Master FSDM</name>
     <description>The BOM for Activity Master</description>
 
-    <url>https://guicedee.com</url>
-
     <properties>
+        <project.scm.baseUrl>https://github.com</project.scm.baseUrl>
+        <project.scm.repoUrl>https://maven.pkg.github.com</project.scm.repoUrl>
+        <project.scm.nameUrl>/Activity-Master/BOM</project.scm.nameUrl>
+        <project.scm.packages>/Activity-Master/Packages</project.scm.packages>
+
+        <project.baseUrl>${project.scm.baseUrl}${project.scm.nameUrl}</project.baseUrl>
+
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>${project.build.sourceEncoding}</project.reporting.outputEncoding>
     </properties>
+
+    <url>https://activitymaster.com</url>
+
+    <licenses>
+        <license>
+            <name>Apache License, Version 2.0</name>
+            <url>https://www.apache.org/licenses/LICENSE-2.0</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <organization>
+        <name>Activity Master</name>
+        <url>https://activitymaster.com</url>
+    </organization>
+
+    <scm>
+        <url>${project.baseUrl}.git</url>
+        <connection>scm:git:${project.scm.url}</connection>
+        <developerConnection>scm:git:${project.scm.url}</developerConnection>
+    </scm>
+
+    <developers>
+        <developer>
+            <id>GedMarc</id>
+            <name>Marc Magon</name>
+            <email>marc.magon@gmail.com</email>
+            <url>https://github.com/GedMarc</url>
+        </developer>
+    </developers>
+
+    <issueManagement>
+        <system>Github</system>
+        <url>${project.baseUrl}/issues</url>
+    </issueManagement>
+
+    <ciManagement>
+        <system>Github Actions</system>
+        <url>${project.baseUrl}/actions</url>
+    </ciManagement>
+
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>GitHub Guiced EE Packages</name>
+            <url>${project.scm.repoUrl}${project.scm.packages}</url>
+        </repository>
+    </distributionManagement>
 
     <dependencyManagement>
         <dependencies>
@@ -67,43 +120,6 @@
 
         </dependencies>
     </dependencyManagement>
-
-
-    <licenses>
-        <license>
-            <name>GPL 3</name>
-            <url>https://www.gnu.org/licenses/gpl-3.0.en.html</url>
-            <distribution>repo</distribution>
-        </license>
-    </licenses>
-
-    <organization>
-        <name>Marc Magon</name>
-        <url>http://jwebmp.com</url>
-    </organization>
-
-    <scm>
-        <url>https://github.com/GedMarc?tab=repositories</url>
-    </scm>
-
-    <developers>
-        <developer>
-            <id>GedMarc</id>
-            <name>Marc Magon</name>
-            <email>marc.magon@gmail.com</email>
-            <url>https://github.com/GedMarc</url>
-        </developer>
-    </developers>
-
-    <issueManagement>
-        <system>Jira</system>
-        <url>https://www.guicedee.com/jira</url>
-    </issueManagement>
-
-    <ciManagement>
-        <system>TeamCity</system>
-        <url>http://guicedee.com/teamcity</url>
-    </ciManagement>
 
     <profiles>
         <profile>
@@ -221,7 +237,7 @@
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-deploy-plugin</artifactId>
-                        <version>3.0.0-M1</version>
+                        <version>3.1.4</version>
                         <configuration>
                             <skip>true</skip>
                         </configuration>
