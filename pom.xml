@@ -2,6 +2,12 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
+    <parent>
+        <groupId>com.guicedee</groupId>
+        <artifactId>versioner</artifactId>
+        <version>2.0.0-RC9</version>
+    </parent>
+
     <groupId>com.guicedee.activitymaster</groupId>
     <artifactId>activity-master-bom</artifactId>
     <packaging>pom</packaging>
@@ -22,7 +28,7 @@
         <project.reporting.outputEncoding>${project.build.sourceEncoding}</project.reporting.outputEncoding>
     </properties>
 
-    <url>https://activitymaster.com</url>
+    <url>https://activity-master.com</url>
 
     <licenses>
         <license>
@@ -34,7 +40,7 @@
 
     <organization>
         <name>Activity Master</name>
-        <url>https://activitymaster.com</url>
+        <url>https://activity-master.com</url>
     </organization>
 
     <scm>
@@ -126,57 +132,6 @@
         </dependencies>
     </dependencyManagement>
 
-    <profiles>
-
-        <profile>
-            <id>sonartype-distribution</id>
-            <activation>
-                <property>
-                    <name>performRelease</name>
-                    <value>true</value>
-                </property>
-            </activation>
-            <build>
-                <plugins>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-gpg-plugin</artifactId>
-                        <version>3.2.8</version>
-                        <configuration>
-                            <gpgArguments>
-                                <arg>--pinentry-mode</arg>
-                                <arg>loopback</arg>
-                                <arg>--batch</arg>
-                            </gpgArguments>
-                            <passphrase>${gpg.passphrase}</passphrase>
-                        </configuration>
-                        <executions>
-                            <execution>
-                                <id>sign-artifacts</id>
-                                <phase>verify</phase>
-                                <goals>
-                                    <goal>sign</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                    </plugin>
-                    <plugin>
-                        <groupId>org.sonatype.central</groupId>
-                        <artifactId>central-publishing-maven-plugin</artifactId>
-                        <version>0.10.0</version>
-                        <extensions>true</extensions>
-                        <configuration>
-                            <publishingServerId>central</publishingServerId>
-                            <autoPublish>true</autoPublish>
-                            <waitUntil>published</waitUntil>
-                        </configuration>
-                    </plugin>
-
-                </plugins>
-            </build>
-        </profile>
-
-    </profiles>
 
 
 </project>
