@@ -11,7 +11,7 @@ Centralizes compatible dependency versions for Activity Master modules. Import t
 <dependencyManagement>
   <dependencies>
     <dependency>
-      <groupId>com.guicedee.activitymaster</groupId>
+      <groupId>com.activity-master</groupId>
       <artifactId>activitymaster-bom</artifactId>
       <version>${activitymaster.version}</version>
       <type>pom</type>
@@ -24,7 +24,7 @@ Centralizes compatible dependency versions for Activity Master modules. Import t
 Then declare dependencies without versions:
 ```
 <dependency>
-  <groupId>com.guicedee.activitymaster</groupId>
+  <groupId>com.activity-master</groupId>
   <artifactId>activity-master-client</artifactId>
 </dependency>
 ```
