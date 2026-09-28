@@ -5,7 +5,7 @@
     <parent>
         <groupId>com.guicedee</groupId>
         <artifactId>versioner</artifactId>
-        <version>2.2.3</version>
+        <version>2.3.0</version>
     </parent>
 
     <groupId>com.activity-master</groupId>
@@ -115,6 +115,21 @@
             </dependency>
             <dependency>
                 <groupId>com.activity-master</groupId>
+                <artifactId>translations-master</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.activity-master</groupId>
+                <artifactId>conversation-master</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.activity-master</groupId>
+                <artifactId>marketplace-master</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.activity-master</groupId>
                 <artifactId>cerial-master</artifactId>
                 <version>${project.version}</version>
             </dependency>
@@ -126,6 +141,16 @@
             <dependency>
                 <groupId>com.activity-master</groupId>
                 <artifactId>image-master</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.activity-master</groupId>
+                <artifactId>wallet-master</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.activity-master</groupId>
+                <artifactId>payment-master</artifactId>
                 <version>${project.version}</version>
             </dependency>
 
