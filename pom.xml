@@ -153,6 +153,16 @@
                 <artifactId>payment-master</artifactId>
                 <version>${project.version}</version>
             </dependency>
+            <dependency>
+                <groupId>com.activity-master</groupId>
+                <artifactId>seo-master</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.activity-master</groupId>
+                <artifactId>notification-master</artifactId>
+                <version>${project.version}</version>
+            </dependency>
 
         </dependencies>
     </dependencyManagement>
