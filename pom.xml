@@ -125,6 +125,16 @@
             </dependency>
             <dependency>
                 <groupId>com.activity-master</groupId>
+                <artifactId>forum-master</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.activity-master</groupId>
+                <artifactId>document-master</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.activity-master</groupId>
                 <artifactId>marketplace-master</artifactId>
                 <version>${project.version}</version>
             </dependency>
@@ -141,6 +151,11 @@
             <dependency>
                 <groupId>com.activity-master</groupId>
                 <artifactId>image-master</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.activity-master</groupId>
+                <artifactId>geo-country-flags</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
